@@ -6,6 +6,7 @@ from matplotlib import pyplot as plt
 
 
 def apply_hard_conditioning(x, conditions):
+    return x
     for t, val in conditions.items():
         x[:, t, :] = val.clone()
     # Set angle (dx dy) to be in the direction of the position finite difference.
